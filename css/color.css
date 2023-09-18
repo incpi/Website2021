@@ -1,0 +1,54 @@
+:root,
+html[data-theme='light'] {
+    --dark: #0a1e32;
+    --light: #fafafa;
+    --mlight: #7dc8e6;
+    --mdark: #195a82;
+    --dgreen: #00c800;
+    --dred: #ff0000;
+}
+
+:root {
+    --nfont: lora;
+    --bfont: inter;
+    --fontdec: Goldman;
+}
+
+html[data-theme='dark'] {
+    --light: #0a1e32;
+    --mlight: #195a82;
+    --dark: #fafafa;
+    --mdark: #7dc8e6;
+    --dgreen: #78ff78;
+    --dred: #ff7878;
+}
+
+label[for='dark'] {
+    background: var(--dark);
+    color: var(--light)
+}
+
+label[for='mdark'] {
+    background: var(--mdark);
+    color: var(--light)
+}
+
+label[for='light'] {
+    background: var(--light);
+    color: var(--dark)
+}
+
+label[for='mlight'] {
+    background: var(--mlight);
+    color: var(--dark)
+}
+
+label[for='dgreen'] {
+    background: var(--dgreen);
+    color: var(--dark)
+}
+
+label[for='dred'] {
+    background: var(--dred);
+    color: var(--dark)
+}
