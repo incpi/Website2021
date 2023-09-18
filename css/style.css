@@ -1,0 +1,964 @@
+#tool>.perline>label {
+    border: 2px solid white;
+    outline: 2px solid black;
+    padding-block: 2px;
+    margin: 0;
+    max-width: 20vw;
+}
+
+.blink {
+    animation: blink 1s ease-in-out infinite;
+}
+
+
+.color {
+    width: 100%;
+    height: 100%;
+    animation: progres 4s infinite;
+    background: var(--dark);
+    animation-timing-function: ease-in-out;
+    border: 5px solid var(--light);
+}
+
+#tool>div {
+    display: flex;
+    justify-content: space-between;
+}
+
+#tool>.editor>* {
+    width: 100%;
+}
+
+.perline>input {
+    display: none;
+}
+
+@keyframes progres {
+    0% {
+        width: 0%;
+    }
+
+    25% {
+        width: 20%;
+    }
+
+    50% {
+        width: 30%;
+    }
+
+    75% {
+        width: 40%;
+    }
+
+    100% {
+        width: 100%;
+    }
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+textarea:disabled {
+    border-color: var(--dark);
+}
+
+input {
+    width: 50%;
+    color: var(--light);
+    font-weight: 400;
+    height: 100%;
+    background: var(--dark);
+    border-radius: 50px;
+    padding: 10px;
+    border: 2px solid var(--mlight);
+    font-family: var(--fontdec);
+}
+
+.label,
+label {
+    background: var(--mdark);
+    color: var(--light);
+    font-family: var(--fontdec);
+    padding: 5px;
+    border-radius: 50px;
+    text-align: center;
+    width: 100%;
+    margin-inline: 2px;
+    white-space: nowrap;
+}
+
+.clock {
+    background: none;
+    color: var(--dark);
+}
+
+.toolbutton,
+#myfile_btn {
+    width: 100%;
+    height: 100%;
+    border-radius: 50px;
+    display: inline-block;
+    font-family: var(--bfont);
+    font-weight: bold;
+    color: var(--light);
+    background: var(--dark);
+    font-size: medium;
+    border: 2px solid var(--mlight);
+}
+
+#myfile_btn {
+    white-space: nowrap;
+    display: flex;
+    overflow: hidden;
+    padding-inline: 10px;
+    text-overflow: ellipsis;
+    justify-content: space-around;
+    max-width: 25vw;
+}
+
+#myfile_btn>span {
+    width: 50%;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+#myfile_btn:hover:before {
+    content: 'New File? :';
+}
+
+.toolbutton:hover,
+#myfile_btn:hover {
+    background-color: var(--mlight);
+    color: var(--dark);
+    border: 2px solid var(--mlight);
+}
+
+.perline>button {
+    padding-block: 5px;
+}
+
+table tbody thead {
+    height: 300px;
+    overflow-y: scroll;
+    display: block;
+}
+
+table,
+th,
+td {
+    border: 2px solid var(--mlight);
+}
+
+td,
+th {
+    padding-inline: 10px;
+}
+
+table {
+    border-collapse: collapse;
+    width: inherit;
+}
+
+thead>tr>th {
+    background: var(--mlight);
+    color: var(--dark);
+    font-size: large;
+}
+
+span#Time {
+    background: none;
+}
+
+div#header,
+.perline {
+    height: 2em;
+    display: inline-flex;
+    font-family: var(--fontdec);
+    justify-content: space-between;
+    align-items: center;
+}
+
+div#header>*,
+.perline>* {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow-x: hidden;
+    width: 25vw;
+    max-width: 25vw;
+    text-align: center;
+}
+
+.editor {
+    display: inline-flex;
+    gap: 10px;
+    font-family: monospace;
+    line-height: 21px;
+    border-radius: 2px solid white;
+}
+
+textarea {
+    resize: vertical;
+    min-height: 5vh;
+    padding: 0;
+    height: 15vh;
+    background: var(--light);
+    color: var(--dark);
+    outline: none;
+    border: 2px solid var(--mlight);
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+#xml_paths {
+    color: var(--dark);
+    min-height: 5vh;
+    height: 12vh;
+    overflow-y: scroll;
+    border: 2px solid var(--dark);
+    resize: vertical;
+}
+
+div#Time {
+    display: flex;
+    justify-content: center;
+    font-family: cursive;
+    font-size: 1em;
+    font-stretch: extra-expanded;
+}
+
+.perline {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    padding-block: 20px 5px;
+    align-items: center;
+}
+
+div#tool {
+    margin-block: 3.1rem;
+    padding-inline: 5%;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+    margin-inline: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 50px;
+    border: 2px solid var(--mdark);
+}
+
+::-webkit-scrollbar-thumb:hover {
+    border-color: var(--mdark);
+    background: var(--mdark);
+}
+
+::-webkit-resizer {
+    border: 2px solid var(--mdark);
+    border-radius: 100%;
+}
+
+::-webkit-scrollbar-corner {
+    display: none;
+}
+
+#footer svg {
+    width: 2rem;
+    padding-inline-end: 1rem;
+    fill: var(--dark);
+}
+
+.expand {
+    text-align: center;
+    color: var(--light);
+    font-family: var(--fontdec);
+    padding: .5em;
+    background: var(--dark);
+    border-radius: .5rem;
+    width: 20%;
+}
+
+.expand:hover {
+    background: var(--mlight);
+    color: var(--dark);
+}
+
+body {
+    background-color: var(--light);
+    color: var(--dark);
+    font-family: var(--bfont);
+    padding: 0;
+    margin: 0;
+    text-align: justify;
+    width: 100%;
+    -ms-user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
+}
+
+body div {
+    width: 100%;
+}
+
+#tool>div>div {
+    width: 20vw;
+}
+
+.perline>div {
+    display: flex;
+}
+
+div#btnhome {
+    border-radius: 20px;
+    border: 2px solid var(--dark);
+    height: 20px;
+}
+
+div#btnhome>div {
+    border-radius: 20px;
+}
+
+img,
+svg {
+    vertical-align: middle;
+    width: 2rem;
+}
+
+nav,
+footer {
+    width: 100%;
+    height: 3rem;
+    font-weight: bolder;
+    font-size: 1.5rem;
+    font-family: var(--fontdec);
+    position: fixed;
+    z-index: 2;
+    margin: 0;
+    top: 0;
+    padding-block: .5rem;
+    padding-inline: 5%;
+    background: var(--light);
+}
+
+nav>div>div {
+    display: contents;
+}
+
+nav>div>div>span {
+    display: none;
+}
+
+#end {
+    width: auto;
+    display: none;
+    overflow: hidden;
+}
+
+.flex {
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: flex-start;
+}
+
+.fdc {
+    flex-direction: column;
+}
+
+#contact {
+    justify-content: space-evenly;
+}
+
+#contact span {
+    margin-block-start: 5rem;
+    position: absolute;
+    display: none;
+}
+
+#contact a:hover span {
+    display: block;
+}
+
+.jsb {
+    justify-content: space-between;
+}
+
+.jcc {
+    justify-content: center;
+}
+
+.active {
+    border-radius: .5rem;
+    padding-inline: 1rem;
+    background: var(--dark);
+    color: var(--light);
+    fill: var(--light);
+}
+
+nav>div {
+    width: 100%;
+}
+
+svg {
+    width: 2rem;
+    height: 2rem;
+    padding: 2px;
+}
+
+nav>div>svg {
+    fill: var(--dark);
+    transform: rotate(-90deg);
+}
+
+nav:hover>div>svg {
+    transform-origin: center;
+}
+
+nav>div>span {
+    font-size: 1em;
+    padding-left: 2vw;
+}
+
+ul,
+li {
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    padding-block: .5em;
+    color: var(--light);
+    border-bottom-left-radius: 1em;
+    border-bottom-right-radius: 1em;
+    width: 80%;
+    background: var(--mdark);
+}
+
+ul>li>ul>li {
+    list-style-type: disc;
+}
+
+a {
+    color: var(--dark);
+    fill: var(--dark);
+    text-align: center;
+    text-decoration: None;
+}
+
+.links {
+    padding-inline: .8rem;
+}
+
+#about div img {
+    width: 20rem;
+    border-radius: 20%;
+    border: 0.5rem solid;
+    margin: 0 auto;
+}
+
+/* The actual timeline (the vertical ruler) */
+.timeline {
+    position: relative;
+    margin-block-start: 1em;
+    max-width: 100%;
+}
+
+/* The actual timeline (the vertical ruler) */
+.timeline::after {
+    content: '';
+    position: absolute;
+    width: 1em;
+    background-color: var(--mlight);
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    margin-left: -0.5em;
+    border-radius: 1em;
+}
+
+/* Container around content */
+.container {
+    padding: 10px 40px;
+    position: relative;
+    background-color: inherit;
+    width: 50%;
+    margin-inline: 0;
+}
+
+/* The circles on the timeline */
+.container::after {
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    right: -17px;
+    background-color: var(--active);
+    top: 15px;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+/* Place the container to the left */
+.left {
+    left: 0;
+    padding-inline-start: 0;
+    justify-content: flex-start;
+}
+
+/* Place the container to the right */
+.right {
+    left: 50%;
+    padding-inline-end: 0;
+}
+
+/* Add arrows to the left container (pointing right) */
+.left::before {
+    content: " ";
+    height: 0;
+    position: absolute;
+    top: 2rem;
+    width: 0;
+    z-index: 1;
+    right: 2rem;
+    border: medium solid var(--mlight);
+    border-width: 10px 0 10px 10px;
+    border-color: transparent transparent transparent var(--mlight);
+}
+
+/* Add arrows to the right container (pointing left) */
+.right::before {
+    content: " ";
+    height: 0;
+    position: absolute;
+    top: 2rem;
+    width: 0;
+    z-index: 1;
+    left: 2rem;
+    border: medium solid var(--mlight);
+    border-width: 10px 10px 10px 0;
+    border-color: transparent var(--mlight) transparent transparent;
+}
+
+/* Fix the circle for containers on the right side */
+.right::after {
+    left: -16px;
+}
+
+/* The actual content */
+.content {
+    padding: 0.5rem;
+    background-color: var(--mlight);
+    position: relative;
+    border-radius: .5rem;
+}
+
+.content>p {
+    display: none;
+}
+
+.phead {
+    display: flex;
+    background: var(--light);
+    width: 100%;
+    min-height: 3rem;
+    justify-content: space-between;
+    border-radius: .25rem;
+    align-items: center;
+    text-align: center;
+}
+
+.phead:hover {
+    color: var(--light);
+    background: var(--dark);
+}
+
+.phead>div {
+    padding-inline: .5em;
+}
+
+button {
+    background: none;
+    fill: var(--dark);
+    border: none;
+    padding: 0;
+    margin: 0;
+}
+
+button#dark_link {
+    padding-inline-start: 10px;
+}
+
+#btn {
+    background: var(--mlight);
+    padding: .5em;
+    margin-block: 2rem;
+    width: 20rem;
+    color: var(--dark);
+    border-radius: 50px;
+    font-size: larger;
+    font-family: 'Goldman';
+}
+
+#btn:hover {
+    background: var(--mdark);
+    color: var(--light);
+}
+
+button#close {
+    display: none;
+}
+
+button svg:hover {
+    fill: var(--mdark);
+}
+
+#loader,
+#c-c.fade {
+    opacity: 1;
+    animation-iteration-count: infinite;
+    transition: opacity ease-in-out 1s;
+}
+
+#loader {
+    position: fixed;
+    padding: 2rem;
+    inset: 0;
+    font-family: var(--fontdec);
+    text-align: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    z-index: 3;
+    background: var(--light);
+    align-items: center;
+    align-content: center;
+}
+
+div#consentc {
+    font-family: monospace;
+    line-height: 1.8rem;
+}
+
+.left2 {
+    justify-content: flex-start;
+}
+
+#loader>div {
+    margin-block: 2rem;
+}
+
+#loader>p {
+    font-size: 4rem;
+    margin: 0;
+}
+
+#loader>div>svg {
+    height: 8rem;
+    width: auto;
+    fill: var(--dark);
+}
+
+#B1,
+#loader>span,
+#B3 {
+    padding-block: 1rem;
+    animation: blink 1s ease-in-out infinite;
+}
+
+@keyframes blink {
+
+    0%,
+    100% {
+        color: var(--light);
+        fill: var(--light);
+    }
+
+    50% {
+        color: var(--dark);
+        fill: var(--dark);
+    }
+}
+
+#B2 {
+    animation: hideshow 4s ease-in-out infinite;
+}
+
+@keyframes hideshow {
+    0% {
+        transform: rotateZ(0deg);
+    }
+
+    25% {
+        transform: rotateZ(-90deg);
+    }
+
+    50% {
+        transform: rotateZ(-180deg);
+    }
+
+    75% {
+        transform: rotateZ(-270deg);
+    }
+
+    100% {
+        transform: rotateZ(-360deg);
+    }
+}
+
+#B1 {
+    margin-inline-end: 5rem;
+}
+
+#B3 {
+    margin-inline-start: 5rem;
+}
+
+#loader.fade,
+#c-c {
+    opacity: 0;
+}
+
+#c-c {
+    width: 90%;
+    display: none;
+    flex-direction: column;
+    margin: auto;
+    padding-top: 4rem;
+}
+
+a:hover {
+    color: var(--mdark);
+    fill: var(--mdark);
+}
+
+section {
+    min-height: 80vh;
+    height: 100%;
+    width: 100%;
+    padding-block-end: 3rem;
+}
+
+section a {
+    display: flex;
+    flex-direction: column;
+    font-size: 1.2rem;
+    align-items: center;
+    font-family: var(--fontdec);
+}
+
+.list {
+    background: var(--mlight);
+    width: 100%;
+    text-align: center;
+}
+
+.list:hover {
+    color: var(--mlight);
+    background: var(--dark);
+}
+
+#list {
+    display: flex;
+    font-family: var(--fontdec);
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#list>div div {
+    display: flex;
+    padding-block: 1rem;
+    border-radius: 1em;
+    flex-direction: column;
+    align-items: center;
+}
+
+.slist>ul {
+    display: none;
+}
+
+#list h1 {
+    text-align: center;
+}
+
+#list>a,
+#list>div {
+    margin: 0;
+    justify-content: space-between;
+}
+
+#list>div {
+    display: flex;
+    padding-block-end: 1rem;
+    margin-inline: 10%;
+    overflow: scroll;
+    min-width: 100%;
+    align-items: flex-start;
+}
+
+#list>div>div {
+    padding: 5px;
+    min-width: 30%;
+}
+
+
+#clcode {
+    display: inline-flex;
+    justify-content: center;
+    width: 100%;
+    height: 3rem;
+    padding-block: .5rem;
+    fill: var(--dark);
+    align-items: center;
+    border-radius: 30px;
+    border: 2px solid black;
+}
+
+#clcode>span,
+#clcode>div {
+    display: flex;
+    margin-inline: 10px;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 2rem;
+    width: 10rem;
+}
+
+#clcode>span>p {
+    padding-inline-start: .5rem;
+    margin: 0;
+}
+
+#clcode>span>svg {
+    width: 1.5rem;
+}
+
+#footer {
+    top: initial;
+    bottom: 0;
+    text-align: center;
+    font-size: small;
+}
+
+#footer div {
+    align-items: center;
+}
+
+section>img {
+    border-radius: 2em;
+    width: 25%;
+    border: 1rem solid var(--dark);
+}
+
+#h_nav a:hover::before {
+    width: 100%;
+    height: .1em;
+    color: var(--mlight);
+    transition: all 250ms linear;
+}
+
+#contact p {
+    margin: 0;
+}
+
+#home>img {
+    width: 100%;
+    border: none;
+}
+
+@media screen and (max-width: 800px) {
+    .perline {
+        padding-block: 20px 10px;
+    }
+
+    #h_nav {
+        display: flex;
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        left: 100%;
+        background: var(--light);
+        padding-block-end: calc(var(--scrolltm, 3rem)*2);
+        inset: var(--scrolltm, 3rem) 0 0 0;
+        margin: 0;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        transition: all 1s;
+    }
+
+    .perline>*,
+    #header>* {
+        margin: 0;
+        width: 28vw;
+    }
+
+    #list>div {
+        flex-direction: column;
+    }
+
+    #contact span {
+        margin-block-start: 3rem;
+    }
+
+    div#h_nav>span {
+        display: block;
+    }
+
+    #end {
+        display: flex;
+    }
+
+    #contact {
+        flex-direction: column;
+    }
+
+    .end {
+        width: 20vw;
+    }
+
+    section>img {
+        width: 50%;
+    }
+
+    /* Place the timelime to the left */
+    .timeline::after {
+        left: 2.5%;
+    }
+
+    /* Full-width containers */
+    .container {
+        width: 100%;
+        padding-left: 3em;
+        padding-right: 0;
+    }
+
+    /* Make sure that all arrows are pointing leftwards */
+    .container::before {
+        left: 2.5rem;
+        border: medium solid var(--mlight);
+        border-width: 10px 10px 10px 0;
+        border-color: transparent var(--mlight) transparent transparent;
+    }
+
+    /* Make sure all circles are at the same spot */
+    .left::after,
+    .right::after {
+        left: 15px;
+    }
+
+    /* Make all right containers behave like the left ones */
+    .right {
+        left: 0%;
+    }
+}
