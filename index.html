@@ -102,9 +102,11 @@
     </div>
     <div id="c-c">
         <section id="home" class="flex fdc" style="display: flex;">
-            <div id="header">
-                <input id="path" type="search" placeholder="Enter your Xpath" class="toolbutton">
-                <button class="toolbutton" onclick="xmlall()">Find</button>
+            <input id="path" type="search" placeholder="Enter your Xpath" class="toolbutton">
+            <div class="perline">
+                <button class="toolbutton" onclick="xmlall()">Submit</button>
+                <input style="display: none;" accept="svg,xml/*,.xml,.body" type="file" name="myfile" id="myfile">
+                <label id="myfile_btn" for="myfile">Upload File</label>
                 <button class="toolbutton" id="Pretify_btn" onclick="premAll();">Pretty All</button>
             </div>
             <div class="perline">
@@ -113,44 +115,17 @@
                 <span id="xmlput" style="color: var(--dgreen);">XML Valid</span>
             </div>
             <div class="perline">
-                <span class="label" id="input_lbl" for="input">Input XML data below</span>
-                <input style="display: none;" accept="svg,xml/*,.xml,.body" type="file" name="myfile" id="myfile">
-                <label id="myfile_btn" for="myfile">Upload File</label>
-                <button class="toolbutton" id="input_btn" onclick="prem('input')">Prettyprint</button>
-            </div>
-            <div>
-                <textarea class="scroll" data-role="none" id="input" placeholder="Enter your XML data here"
-                    style="width: 100%;"></textarea>
-            </div>
-            <div id="xpaths" class="perline">
-                <span class="label" for="x_paths">X-Paths results</span>
+                <span class="label">Input</span>
                 <span class="label clock">Time</span>
-                <button id="x_paths_btn" class="toolbutton" onclick="prem('x_paths');">Prettyprint</button>
+                <span class="label">Output</span>
             </div>
-            <div class="editor">
-                <textarea disabled="" class="scroll" id="x_paths" style="width: 100%"></textarea>
-            </div>
-            <div id="XMLData" class="perline">
-                <span class="label" for="xml_data">Data filtered</span>
-                <span class="label clock">Time</span>
-                <button id="xml_data_btn" class="toolbutton" onclick="prem('xml_data');">Prettyprint</button>
-            </div>
-            <span style="display: none;">Note: <i style="color:var(--dred)">Output tags will be in <strong>Lower Case
-                    </strong>
+            <span style="display: none;">Note: <i style="color:var(--dred)">Output tags will be in.
+                    <strong>Lower Case </strong>
                     due in web-app.</i></span>
             <div class="editor">
-                <textarea disabled="" class="scroll" id="xml_data" style="width: 100%"></textarea>
-            </div>
-            <div id="xmlpaths" class="perline">
-                <span class="label" id="table_lbl" for="xml_paths">Xml Paths to individual Nodes</span>
-                <span class="label clock">TIme</span>
-                <span class="label clock">Count</span>
-            </div>
-            <div class="editor">
-                <div class="scroll" id="xml_paths">
-                    <table>
-                    </table>
-                </div>
+                <textarea class="scroll" data-role="none" id="input" placeholder="Enter your XML data here"
+                    style="width: 100%;"></textarea>
+                <textarea disabled="" class="scroll" id="output" style="width: 100%"></textarea>
             </div>
         </section>
         <section id="Project" class="flex fdc">
@@ -408,8 +383,7 @@
                 <label for="dgreen">Valid Color</label>
                 <input class="input-color-picker" type="color" data-id="dgreen" id="dgreen" value="#78ff78">
             </div>
-            <button style="margin-block:20px ;" class="toolbutton" onclick="resetSave()"
-            type="submit">Reset</button>
+            <button style="margin-block:20px ;" class="toolbutton" onclick="resetSave()" type="submit">Reset</button>
         </section>
     </div>
     <footer id="footer">

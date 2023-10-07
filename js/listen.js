@@ -26,17 +26,15 @@ function prem(i) {
 
 function premAll() {
     id = "Pretify_btn";
-    args = ['input', 'x_paths', 'xml_data'];
+    args = ['input', 'output'];
     if (getId(id).innerHTML == "Linear All") {
         for (index in args) {
             getId(args[index]).value = linear(args[index]);
-            getId((args[index]) + "_btn").innerHTML = "Prettyprint";
         }
         getId(id).innerHTML = "Pretty All";
     } else {
         for (index in args) {
             getId(args[index]).value = prettifyXml(args[index]);
-            getId((args[index]) + "_btn").innerHTML = "Linearize";
         }
         getId(id).innerHTML = "Linear All";
     }

@@ -207,7 +207,7 @@ textarea {
     resize: vertical;
     min-height: 5vh;
     padding: 0;
-    height: 15vh;
+    height: 70dvh;
     background: var(--light);
     color: var(--dark);
     outline: none;
@@ -239,7 +239,7 @@ div#Time {
     display: flex;
     flex-direction: row;
     align-content: center;
-    padding-block: 20px 5px;
+    padding-block: .5rem;
     align-items: center;
 }
 
@@ -878,7 +878,7 @@ section>img {
 
 @media screen and (max-width: 800px) {
     .perline {
-        padding-block: 20px 10px;
+        padding-block: 1rem;
     }
 
     #h_nav {
