@@ -68,7 +68,7 @@ function prettifyXml(i) {
             var resultDoc = xsltProcessor.transformToDocument(xmlDoc);
             var resultXml = new XMLSerializer().serializeToString(resultDoc);
             error(false, "Time", "", "Prettyprint Success")
-            return resultXml.replaceAll(/(<incpi>[\s\n]+)|([\s\n]+<\/incpi>)/g, "").replaceAll('\n  ', '\n');
+            return resultXml.replaceAll('\n  ', '\n').replaceAll(/(<incpi>[\s\n]+)|([\s\n]+<\/incpi>)/g, "");
         }
     }
 }

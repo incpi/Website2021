@@ -38,7 +38,7 @@ function xmlall() {
                 const data = dataxml();
                 getId("output").value = data === null ? 'No data present!' : data;
                 getId('input').value = prettifyXml('input');
-                getId("output").value = prettifyXml("output").replaceAll(/(<result>[\s\n]+)|([\s\n]+<\/result>)/g, "");
+                getId("output").value = prettifyXml("output").replaceAll('\n  ', '\n').replaceAll(/(<result>[\s\n]+)|([\s\n]+<\/result>)/g, "");
                 getId("output").style.color = "var(--dark)";
             }).finally(() => {
                 clocks.innerHTML = timeseter(s);
