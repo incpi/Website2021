@@ -10,7 +10,7 @@ getId('path').addEventListener('input', (evt) => {
 (getId('path').value == "") ? error(true, 'xinput', "Enter X-path", "") : error(!isValidXPath(getId('path').value, document), 'xinput', "X-Path Invalid", "X-Path Valid");
 
 function linear(i) {
-    error(false, "Time","", "Linearize Success")
+    error(false, "Time", "", "Linearize Success")
     return getId(i).value.replaceAll(/\s+/g, " ").replaceAll(/(>[\n\r\s\t]+<)/g, "><");
 }
 function prem(i) {
@@ -40,7 +40,7 @@ function premAll() {
     }
 }
 function linear(i) {
-    error(false, "Time","", "Linearize Success")
+    error(false, "Time", "", "Linearize Success")
     return getId(i).value.replaceAll(/\s+/g, " ").replaceAll(/(>[\n\r\s\t]+<)/g, "><");
 }
 function prettifyXml(i) {
@@ -67,8 +67,8 @@ function prettifyXml(i) {
             xsltProcessor.importStylesheet(xsltDoc);
             var resultDoc = xsltProcessor.transformToDocument(xmlDoc);
             var resultXml = new XMLSerializer().serializeToString(resultDoc);
-            error(false, "Time","", "Prettyprint Success")
-            return resultXml.replaceAll(/(<incpi>[\s\n]+)|([\s\n]+<\/incpi>)/g,"").replaceAll('\n  ','\n');
+            error(false, "Time", "", "Prettyprint Success")
+            return resultXml.replaceAll(/(<incpi>[\s\n]+)|([\s\n]+<\/incpi>)/g, "").replaceAll('\n  ', '\n');
         }
     }
 }

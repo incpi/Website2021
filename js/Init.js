@@ -35,9 +35,11 @@ function xmlall() {
                 timerst(clocks);
             });
             sleep(10).then(() => {
-                const data=dataxml()
-                getId("output").value = data===null?'No data present!':data;
-                getId("output").style.color = "var(--dark)"
+                const data = dataxml();
+                getId("output").value = data === null ? 'No data present!' : data;
+                getId('input').value = prettifyXml('input');
+                getId("output").value = prettifyXml("output").replaceAll(/(<result>[\s\n]+)|([\s\n]+<\/result>)/g, "");
+                getId("output").style.color = "var(--dark)";
             }).finally(() => {
                 clocks.innerHTML = timeseter(s);
                 timerst(clocks);

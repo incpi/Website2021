@@ -16,9 +16,9 @@ colorPicker.forEach((item) => {
     });
 });
 
-function onreadycolor(){
+function onreadycolor() {
     colorPicker.forEach((item) => {
-        html.style.setProperty(`--${item.getAttribute("data-id")}`,localStorage.getItem(`--${item.getAttribute("data-id")}`))
+        html.style.setProperty(`--${item.getAttribute("data-id")}`, localStorage.getItem(`--${item.getAttribute("data-id")}`))
     });
 }
 function resetSave() {
@@ -27,5 +27,4 @@ function resetSave() {
         localStorage.removeItem(`--${item.getAttribute("data-id")}`)
     });
     document.querySelector()
-    
 }

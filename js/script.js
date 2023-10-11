@@ -78,7 +78,7 @@ function openNav(open, close, _) {
 }
 
 //time-Project -- section
-function time(id1,cl='clcode') {
+function time(id1, cl = 'clcode') {
     getId(id1).classList.toggle('active');
     var z = getId(cl).getElementsByTagName('span');
     var v = 0;
