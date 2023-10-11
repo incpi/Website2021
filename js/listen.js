@@ -50,7 +50,7 @@ function prettifyXml(i) {
         if (checkxml(i)) {
             error(true, "Time", "Parse error during Prettyprint"); return getId(i).value
         } else {
-            var xmlDoc = new DOMParser().parseFromString(getId(i).value, 'text/xml');
+            var xmlDoc = new DOMParser().parseFromString(`<INCPI>${getId(i).value}</INCPI>`, 'text/xml');
             var xsltDoc = new DOMParser().parseFromString([
                 '<xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform">',
                 '  <xsl:strip-space elements="*"/>',
@@ -68,7 +68,8 @@ function prettifyXml(i) {
             var resultDoc = xsltProcessor.transformToDocument(xmlDoc);
             var resultXml = new XMLSerializer().serializeToString(resultDoc);
             error(false, "Time","", "Prettyprint Success")
-            return resultXml;
+            return resultXml.substring(7,resultxml.length-7).replaceAll
+('\n  ','\n');
         }
     }
 }
