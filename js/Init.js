@@ -64,3 +64,13 @@ function timeseter(old) {
     else if (millis < 60000) { return `Time: ${(seconds < 10 ? '0' : '')}${seconds}:${(millis % 1000).toFixed(0)} sec` }
     else { return `Time: ${Math.floor(millis / 60000)}:${(seconds < 10 ? '0' : '')}${seconds}:${(millis % 1000).toFixed(0)} min`; }
 }
+
+window.ga = function () {
+    ga.q.push(arguments)
+  };
+  ga.q = [];
+  ga.l = +new Date;
+  ga('create', 'G-FJG5EE1FE4', 'auto');
+  ga('set', 'anonymizeIp', true);
+  ga('set', 'transport', 'beacon');
+  ga('send', 'pageview')
