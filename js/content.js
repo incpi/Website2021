@@ -3,6 +3,7 @@ function init_id() {
     <div id="loader">
     </div>
     <div id="c-c">
+        <section id="index" class="flex fdc" style="display: flex;"></section>
         <section id="home" class="flex fdc" style="display: flex;"></section>
         <section id="Project" class="flex fdc"></section>
         <section id="contact" class="flex"></section>
@@ -52,11 +53,12 @@ function nav_gen() {
         <div class="flex jsb end">
             <div id="h_nav">
                 <span></span>
-                <a  onclick='show("home","_home_link")' class="links  active" id="_home_link">Home</a>
+                <a  onclick='show("index","_index_link")' class="links  active" id="_index_link">Home</a>
+                <a  onclick='show("home","_home_link")' class="links  active" id="_home_link">Tool</a>
                 <a  onclick='show("Project","_timeline")' class="links" id="_timeline">Project</a>
                 <a  onclick='show("contact","_contact")' class="links" id="_contact">Contact</a>
                 <a  onclick='show("about","_abt_link")' class="links" id="_abt_link">About</a>
-                <a  onclick='show("tool","_tool_link")' class="links" id="_tool_link">Tool</a>
+                <a  onclick='show("tool","_tool_link")' class="links" id="_tool_link">settings</a>
                 <span></span>
             </div>
             <button title="Dark/Light Mode" type="button" class="act" id="dark_link">
@@ -87,6 +89,23 @@ function nav_gen() {
         </div>
     `
     document.querySelector('nav').innerHTML = navdata
+}
+function index_gen() {
+    indexdata = `<div class="flex fdc">
+    <h1>Below Open-Projects</h1>
+    <h3><a href="https://incpi.github.io/Swift-Helper-browser-extension/" >Swift-Helper chrome-extension</a></h3>
+    <h5>Above link leads to repo-page of extension where I DEVELOPED extension for Teachers who uses swiftchat bots.</h5>
+    <br>
+    <h3><a href="https://incpi.github.io/cpi/">Trace Modifer CPI Helper Plugin</a></h3>
+    <h5>Above link leads to page which gives insite about this Plugin.</h5>
+    <br>
+    <h3><a href="https://github.com/dbeck121/CPI-Helper-Chrome-Extension" >UI - redesign of extension of "CPI-Helper-Chrome-Extension"</a></h3>
+    <h5>Above link leads to repo of extension where I redesigned the UI and Got it merged.</h5>
+    </div>
+    <br>
+Need for? please goto diffrent tabs. Thank you.
+    `
+    document.querySelector('#index').innerHTML = indexdata
 }
 function home_gen() {
     homedata = `
@@ -390,6 +409,6 @@ function Footer() {
     document.querySelector('#footer').innerHTML = footer
 }
 function init() {
-    init_id(); loader(); nav_gen(); home_gen(); Project_gen(); contact_gen(); about_gen(); tool_gen(); Footer();
+    init_id(); loader(); nav_gen(); index_gen(); home_gen(); Project_gen(); contact_gen(); about_gen(); tool_gen(); Footer();
 }
 init()
