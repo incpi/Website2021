@@ -123,7 +123,7 @@ function ready(a = 3500) {
     if (localStorage['agr'] === 'true') {
         p = localStorage.getItem('page')
         if (p == null) {
-            show("home", "_home_link")
+            show("index", "_index_link")
         } else {
             p = p.split(" ");
             show(p[0], p[1]);
