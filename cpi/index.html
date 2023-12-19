@@ -11,26 +11,77 @@
     <title>Trace Modifier Plugin</title>
     <link href="/css/color.css" rel="StyleSheet" />
     <link href="/css/style.css" rel="StyleSheet" />
+
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+    integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/fomantic-ui@2.9.3/dist/semantic.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/fomantic-ui@2.9.3/dist/semantic.min.js"></script>
 </head>
 
 <body>
-    <div style="font-size:1.5rem;font-family: monospace;text-wrap: wrap;">
-        Hi, <br>
-        This is page will give small block for plugin (Trace Modifier). <br>
-        <p>The CPI Helper plugin lets developers use trace step modifiers in integration flows <br>
-            But be careful: the plugin changes the global variable you set for each flow. it will use global instead if input is blank.</p>
-        <div>
-            <h5>In short</h5>
-            Set null which will use global. <br>
-            Set Global (Scope: browser) <br>
-            Set flow modifer count (Scope: Iflow)
-        </div>
-        <p>
-        <h5>In long</h5>
-        Enter a number or leave blank. 0 => traces all steps and may freeze your browser. <br>
-        Blank => uses the global variable from the extension page. <br>
-        Clear All: delete the saved data from the trace step modifier. Useful for starting over.</p>
+  <div class="ui segment">
+    <div class="ui header">
+      <div class="fluid ui primary big active button">CPI Helper extension for chrome : Trace Step Modifier</div>
     </div>
-</body>
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-FJG5EE1FE4"></script>
-</html>
+    <div class="ui segment">Thisplugin lets user/Develper use trace step modifier in ntergration flows. <br><span
+        class="ui red text">Carefull while using this because it might be ended up in browser freeze.</span><br>
+      <div class="ui vertical segment">
+        <div class="ui small header">Issue:</div><span class="ui text">Sometimes, Using CPI helper doesn't take all
+          steps in Inline debug mode. This plugin will help you with this issue to have more flexible control.</span>
+      </div>
+      <div class="ui vertical segment">
+        <div class="ui small header">Configuration (Without Plugin):</div>
+        <div class="ui text"> you want to change this configuration for all the flows. then go to extention page where
+          you
+          configure theme & tab name,etc.</div>
+        <div class="ui segments list">
+          <div class="ui blue segment">Set as any number<divclass="list">
+              <div class="item"> Chnages applied to all the flows. 300 (default) - Safest option</div>
+          </div>
+        </div>
+        <div class="ui red segment">Set as 0 <div class="list">
+            <div class="item">This willremove the limit at all. but for large flows. this will freeze up whole browser.
+            </div>
+          </div>
+        </div>
+        <div class="ui green segment">Set as null or leave it blank <div class="list">
+            <div class="item">This will use default value</div>
+          </div>
+        </div>
+      </div>
+      <div class="ui vertical segment">
+        <div class="ui small.header">Configuration (With Plugin):</div>
+        <div class="ui descrption">This will allow to change globalvariable for each Integration flow. This will
+          overwrite
+          global variable which will be applicable to tentent. </div><br>
+        <div class="ui text"> Step 1: Enbaled plugin from plugin UI page from Design page.<br> Step 2: Reload the
+          messages
+          ( Alt + 3) Button which used for popup. <br>Step 3: plugin area whereyou can configure the step
+          counts.Whatever
+
+          <br />
+          <div class="ui fluid basic orange centered label">
+            If you don't see plugin page click on center icon on popup page.
+          </div>
+
+          <br />
+          you configure in trace modiferm page will be work as iflow scope variable. <div class="ui segments list">
+            <div class="ui blue segment">Set as any number <divaclass="list">
+                <div class="item"> Chnages applied to current flow. </div>
+            </div>
+          </div>
+          <div class="ui red segment">Set as 0<div class="list">
+              <div class="item">Remove the limit for flow</div>
+            </div>
+          </div>
+          <div class="ui green segment">Set as null or leave it blank<div class="list">
+              <div class="item">Set as global variable (default)</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  <a class="fluid ui secondary button" href="https://incpi.github.io">Go to main Site @ incpi.github.io</a></div></body>
+    </html>
