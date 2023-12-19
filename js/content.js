@@ -96,7 +96,7 @@ function index_gen() {
     <h3><a href="https://incpi.github.io/Swift-Helper-browser-extension/" >Swift-Helper chrome-extension</a></h3>
     <h5>Above link leads to repo-page of extension where I DEVELOPED extension for Teachers who uses swiftchat bots.</h5>
     <br>
-    <h3><a href="https://incpi.github.io/cpi/">Trace Modifer CPI Helper Plugin</a></h3>
+    <h3><a href="https://incpi.github.io/cpihelper-plugin/">Trace Modifer CPI Helper Plugin</a></h3>
     <h5>Above link leads to page which gives insite about this Plugin.</h5>
     <br>
     <h3><a href="https://github.com/dbeck121/CPI-Helper-Chrome-Extension" >UI - redesign of extension of "CPI-Helper-Chrome-Extension"</a></h3>
