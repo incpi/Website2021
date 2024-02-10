@@ -5,7 +5,6 @@ function init_id() {
     <div id="c-c">
         <section id="index" class="flex fdc" style="display: flex;"></section>
         <section id="home" class="flex fdc" style="display: flex;"></section>
-        <section id="Project" class="flex fdc"></section>
         <section id="contact" class="flex"></section>
         <section id="about" class="flex fdc"></section>
         <section id="tool" class="flex fdc" style="display: flex;"></section>
@@ -55,7 +54,6 @@ function nav_gen() {
                 <span></span>
                 <a  onclick='show("index","_index_link")' class="links  active" id="_index_link">Home</a>
                 <a  onclick='show("home","_home_link")' class="links  active" id="_home_link">Tool</a>
-                <a  onclick='show("Project","_timeline")' class="links" id="_timeline">Project</a>
                 <a  onclick='show("contact","_contact")' class="links" id="_contact">Contact</a>
                 <a  onclick='show("about","_abt_link")' class="links" id="_abt_link">About</a>
                 <a  onclick='show("tool","_tool_link")' class="links" id="_tool_link">settings</a>
@@ -91,25 +89,45 @@ function nav_gen() {
     document.querySelector('nav').innerHTML = navdata
 }
 function index_gen() {
-    indexdata = `<div class="flex fdc">
-    <h1>Below Open-Projects</h1>
-    <div class="card">
-    <h2>Swift-Helper chrome-extension</h2>
-        <p>Above link leads to repo-page of extension where I DEVELOPED extension for Teachers who uses swiftchat bots.</p>
-        <a href="https://incpi.github.io/Swift-Helper-browser-extension/" class="btn">Read More</a>
+    indexdata =
+        `
+    <div class="flex fdc" style="margin:2%">
+    <h1 style="font-size: 2.5rem;margin: 0;font-family:var(--fontdec)">Projects</h1>
+    <div class="container content">
+        <div class="phead">
+            <a href="https://incpi.github.io/Swift-Helper-browser-extension" class="btn">Swift-Helper
+                chrome-extension</a>
+        </div>
+        <p style="display: block;">Swift Helper is a chrome extension that helps you write faster and better code in Swift. It provides features such as syntax highlighting, code completion, error checking, formatting, and refactoring. You can also access documentation, tutorials, and examples from within the extension. Swift Helper is compatible with most online code editors and IDEs, such as CodePen, Repl.it, and Xcode. Whether you are a beginner or an expert, Swift Helper can make your coding experience more productive and enjoyable.</p>
     </div>
-    <div class="card">
-    <h2>Trace Modifer CPI Helper Plugin</h2>
-        <p>Above link leads to page which gives insite about this Plugin.</p>
-        <a href="https://incpi.github.io/cpihelper-plugin/" class="btn">Read More</a>
+    <div class="container content">
+        <div class="phead">
+            <a href="https://incpi.github.io/cpihelper-plugin" class="btn">Trace Modifer CPI Helper Plugin</a>
+        </div>
+        <p style="display: block;">This is a small plugin for the CPI helper extension that allows you to precisely control the limit of floe to optimize your workflow. With this plugin, you can adjust the floe limit according to your needs and preferences, and see the impact on your performance and efficiency. This plugin is easy to activate and use, and compatible with the latest version of the CPI helper extension.</p>
     </div>
-    <div class="card">
-        <h2>UI - redesign of extension of "CPI-Helper-Chrome-Extension"</h2>
-        <p>Above link leads to repo of extension where I redesigned the UI and Got it merged.</p>
-        <a href="https://github.com/dbeck121/CPI-Helper-Chrome-Extension" class="btn">Read More</a>
+    <div class="container content">
+        <div class="phead">
+            <a href="https://github.com/dbeck121/CPI-Helper-Chrome-Extension" class="btn">UI - redesign of extension
+                <br>
+                "CPI-Helper-Chrome-Extension"</a>
+        </div>
+        <p style="display: block;">Above link leads to repo of extension where I redesigned the UI and Got it merged.</p>
     </div>
+    <div class="container content">
+        <div class="phead">
+            <a href="#" class="btn">Discord Python YT notification BOT</a>
+        </div>
+        <p style="display: block;">A discord youtube notification bot is a program that can send messages to a discord channel whenever a new video is uploaded or streamed on youtube. The bot can be customized to track specific youtube channels or keywords, and to send different types of notifications, such as embeds, pings, or reactions. A discord youtube notification bot can be useful for keeping a community updated on the latest content from their favorite creators, or for sharing relevant videos on a certain topic.</p>
     </div>
-    <br>
+    <div class="container content">
+        <div class="phead">
+            <a href="#" class="btn">Custom Adaptor For SAP CPI</a>
+        </div>
+        <p style="display: block;">Currently in progress</p>
+    </div>
+</div>
+<br>
 Need for? please goto diffrent tabs. Thank you.
     `
     document.querySelector('#index').innerHTML = indexdata
@@ -167,14 +185,14 @@ function Project_gen() {
                             </svg>
                             <p>Mech</p>
                         </span>
-                        <div onclick="expand('.content','0')" class="expand" atr="e">
+                        <div onclick="expand('.content.card','0')" class="expand" atr="e">
                             Expand All
                         </div>
                         </div>
                         <div class="timeline" id="time1">
                         <div class="container left">
-                            <div class="content Cube">
-                                <div class="phead" onclick="expand('.content',0)">
+                            <div class=" card content Cube">
+                                <div class="phead" onclick="expand('.content.card',0)">
                                     <div>2021-22</div>
                                     <div>Material</div>
                                     <div>Cube</div>
@@ -184,8 +202,8 @@ function Project_gen() {
                             </div>
                         </div>
                         <div class="container right">
-                            <div class="content Code">
-                                <div class="phead" onclick="expand('.content',1)">
+                            <div class=" card content Code">
+                                <div class="phead" onclick="expand('.content.card',1)">
                                     <div>2021-22</div>
                                     <div>Discord YT bot</div>
                                     <div>Code</div>
@@ -198,8 +216,8 @@ function Project_gen() {
                             </div>
                         </div>
                         <div class="container left">
-                            <div class="content Mech">
-                                <div class="phead" onclick="expand('.content',2)">
+                            <div class=" card content Mech">
+                                <div class="phead" onclick="expand('.content.card',2)">
                                     <div>2020-22</div>
                                     <div>Virtual Study</div>
                                     <div>Mech</div>
@@ -209,8 +227,8 @@ function Project_gen() {
                             </div>
                         </div>
                         <div class="container right">
-                            <div class="content  Cube">
-                                <div class="phead" onclick="expand('.content',3)">
+                            <div class=" card content  Cube">
+                                <div class="phead" onclick="expand('.content.card',3)">
                                     <div>2019-20</div>
                                     <div>3d 1st project</div>
                                     <div>Cube</div>
@@ -221,8 +239,8 @@ function Project_gen() {
                             </div>
                         </div>
                         <div class="container left">
-                            <div class="content Code">
-                                <div class="phead" onclick="expand('.content',4)">
+                            <div class=" card content Code">
+                                <div class="phead" onclick="expand('.content.card',4)">
                                     <div>2018-21</div>
                                     <div>Variable engine</div>
                                     <div>Mech</div>
@@ -232,8 +250,8 @@ function Project_gen() {
                             </div>
                         </div>
                         <div class="container right">
-                            <div class="content Mech">
-                                <div class="phead" onclick="expand('.content',5)">
+                            <div class=" card content Mech">
+                                <div class="phead" onclick="expand('.content.card',5)">
                                     <div>2017</div>
                                     <div>First Project</div>
                                     <div>Mech</div>
@@ -416,6 +434,6 @@ function Footer() {
     document.querySelector('#footer').innerHTML = footer
 }
 function init() {
-    init_id(); loader(); nav_gen(); index_gen(); home_gen(); Project_gen(); contact_gen(); about_gen(); tool_gen(); Footer();
+    init_id(); loader(); nav_gen(); index_gen(); home_gen(); contact_gen(); about_gen(); tool_gen(); Footer();
 }
 init()
