@@ -93,14 +93,21 @@ function nav_gen() {
 function index_gen() {
     indexdata = `<div class="flex fdc">
     <h1>Below Open-Projects</h1>
-    <h3><a href="https://incpi.github.io/Swift-Helper-browser-extension/" >Swift-Helper chrome-extension</a></h3>
-    <h5>Above link leads to repo-page of extension where I DEVELOPED extension for Teachers who uses swiftchat bots.</h5>
-    <br>
-    <h3><a href="https://incpi.github.io/cpihelper-plugin/">Trace Modifer CPI Helper Plugin</a></h3>
-    <h5>Above link leads to page which gives insite about this Plugin.</h5>
-    <br>
-    <h3><a href="https://github.com/dbeck121/CPI-Helper-Chrome-Extension" >UI - redesign of extension of "CPI-Helper-Chrome-Extension"</a></h3>
-    <h5>Above link leads to repo of extension where I redesigned the UI and Got it merged.</h5>
+    <div class="card">
+    <h2>Swift-Helper chrome-extension</h2>
+        <p>Above link leads to repo-page of extension where I DEVELOPED extension for Teachers who uses swiftchat bots.</p>
+        <a href="https://incpi.github.io/Swift-Helper-browser-extension/" class="btn">Read More</a>
+    </div>
+    <div class="card">
+    <h2>Trace Modifer CPI Helper Plugin</h2>
+        <p>Above link leads to page which gives insite about this Plugin.</p>
+        <a href="https://incpi.github.io/cpihelper-plugin/" class="btn">Read More</a>
+    </div>
+    <div class="card">
+        <h2>UI - redesign of extension of "CPI-Helper-Chrome-Extension"</h2>
+        <p>Above link leads to repo of extension where I redesigned the UI and Got it merged.</p>
+        <a href="https://github.com/dbeck121/CPI-Helper-Chrome-Extension" class="btn">Read More</a>
+    </div>
     </div>
     <br>
 Need for? please goto diffrent tabs. Thank you.
