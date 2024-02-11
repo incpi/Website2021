@@ -8,13 +8,14 @@ function pid(Page_id, nav_id) {
     var y = getId("h_nav").getElementsByTagName("a");
     for (i = 0; i < x.length; i++) {
         (y[i].id === nav_id) ? ((!getId(nav_id).classList.contains("active")) ? getId(nav_id).classList.add("active") : '') : getId(y[i].id).classList.remove("active");
-        x[i].style.display = (x[i].id === Page_id) ? "flex" : "none";
+        x[i].style.display = (x[i].id === Page_id || nav_id == null) ? "flex" : "none";
     }
 }
 
 //display class and open nav in mobile view
-function show(Page_id, nav_id) {
+function show(Page_id, nav_id = null) {
     pid(Page_id, nav_id);
+    nav_id == null ? "_index_link" : nav_id
     openNav("close", "open", "100%");
     localStorage.setItem("page", Page_id + " " + nav_id)
 }
