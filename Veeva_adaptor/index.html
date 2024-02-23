@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Veeva Custom SAP CPI Adaptor</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <header>
+        <h1>Veeva Custom SAP CPI Adaptor</h1>
+        <nav>
+            <ul>
+                <li><a href="#benefits">Benefits</a></li>
+                <li><a href="#installation">Installation</a></li>
+                <li><a href="#limitations">Limitations</a></li>
+                <li><a href="#features">Features & Development</a></li>
+                <li><a href="#privacy">Privacy and Data Protection</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="benefits">
+            <h2>Benefits</h2>
+            <p>The Veeva Custom SAP CPI Adaptor enables faster and more reliable integration between Veeva CRM and SAP
+                ERP, reducing the need for manual authentication and ensuring data accuracy and consistency across the
+                systems.</p>
+            <p>The adaptor supports various business scenarios that are common in the life sciences industry, such as
+                managing orders, inventory, pricing, billing, and customer master data. This helps to streamline the
+                business processes and improve customer satisfaction and loyalty.</p>
+            <p>The adaptor leverages the SAP Cloud Platform Integration service, which is a cloud-based solution that
+                offers high scalability, security, and performance. The adaptor also provides a user-friendly interface
+                for configuring and monitoring the integration processes, allowing for easy troubleshooting and
+                maintenance.</p>
+        </section>
+        <section id="installation">
+            <h2>Installation</h2>
+            <p>To install the Veeva Custom SAP CPI Adaptor, you need to have access to the SAP Cloud Platform
+                Integration tenant and the Veeva CRM system. You also need to download the adaptor package (.esa file in
+                github) and import it into your CPI tenant.</p>
+            <p>After importing the adaptor package, you need to configure the connection parameters for Veeva CRM and
+                SAP ERP, such as the endpoint URLs, authentication credentials, and message mapping rules. You can use
+                the provided configuration guide for more details on how to set up the adaptor.</p>
+            <p>Once the configuration is done, you can activate the integration flows for the business scenarios that
+                you want to enable. You can also use the monitoring dashboard to view the status and logs of the
+                integration processes.</p>
+        </section>
+        <section id="limitations">
+            <h2>Limitations</h2>
+            <p>As of version 1.0.0, the Veeva Custom SAP CPI Adaptor can only fetch data (via POST request to
+                authenticate) from Veeva. Attempting updates on Veeva (at your own risk) might not reflect the desired
+                operation.</p>
+        </section>
+        <section id="features">
+            <h2>Features & Development</h2>
+            <p><strong>V1.0.0</strong></p>
+            <p>Veeva authenticate (Basic Auth Supported as of now with SAP CPI security material to store it securely)
+                and process execute next call for query (VQL).</p>
+            <p><strong>NOTE:</strong> test_veeva_server.js file is a locally hosted web server where I try to mimic the
+                Veeva responses for your reference. In case you want to know how it works...</p>
+        </section>
+        <section id="privacy">
+            <h2>Privacy and Data Protection</h2>
+            <p>The plugin is designed to protect your privacy and does not collect any personal data. You can trust
+                that:</p>
+            <ul>
+                <li>No personal data is collected</li>
+                <li>No URLs, tenant names, iflow names, etc., are collected</li>
+                <li>The data does not leave, except for where you expose it in SAP CPI, to any internal/external
+                    service/server/site/vendor.</li>
+            </ul>
+        </section>
+        <section id="contact">
+            <h2>Contact</h2>
+            <p>If you have any questions or inquiries regarding the Veeva Custom SAP CPI Adaptor, please feel free to
+                contact us:</p>
+            <p>Email: omk14p@outlook.com</p>
+            <p><a href="../">Home page</a></p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Your Company Name. All rights reserved.</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+
+</html>
