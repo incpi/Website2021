@@ -26,6 +26,23 @@ nav ul {
     padding: 0;
 }
 
+img {
+    width: 70%;
+    border: 2px solid #bbb;
+    border-radius: .5rem;
+    padding: .5rem;
+}
+
+h3 {
+    border-bottom: .3em solid black;
+    padding: .2rem 3rem;
+    border-radius: 3rem;
+    width: 70%;
+    text-align: center;
+    border-top: .1rem solid black;
+    border-inline: 0.2rem solid black;
+}
+
 nav ul li {
     display: inline;
     margin-right: 20px;
