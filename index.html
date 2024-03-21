@@ -9,26 +9,37 @@
     <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#0a1e32" />
 
     <meta content="" name="description">
-    <!-- fevicon -->
-    <link rel="shortcut icon" href="/res/fav.svg">
-    <!-- custom script -->
-    <link href="/css/color.css" rel="StyleSheet" />
-    <link href="/css/style.css" rel="StyleSheet" />
-    <!-- fonts -->
     <script src="https://secure.exportkit.com/cdn/js/ek_googlefonts.js?v=6"></script>
-    <script src="/js/datajson.js" defer></script>
-    <script src="/js/content.js" defer></script>
-    <script src="/js/script.js" defer></script>
-    <script src="/js/toolscript.js" defer></script>
-    <script src="/js/color.js" defer></script>
-    <!-- test -->
-    <script src="/js/listen.js" defer></script>
-    <script src="/js/Init.js" defer></script>
-    <!-- <script src="/js/callfun.js" defer></script> -->
-
 </head>
 
 <body onload="ready()"></body>
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-FJG5EE1FE4"></script>
+<script>
+    const baseUrl = window.location.hostname.match(/^\d/g) == null ? window.location.origin + window.location.pathname : "";
+    link = document.createElement('link')
+    link.rel = "icon"
+    link.type = "image/x-icon"
+    link.href = baseUrl + "/res/fav.svg"
+    document.head.appendChild(link);
+    const cssList = ['css/color.css', 'css/style.css']
+    for (i of cssList) {
+        link = document.createElement('link')
+        link.rel = "stylesheet"
+        link.type = "text/css"
+        link.href = baseUrl + i
+        if (!document.querySelector(`head link[href='${baseUrl + i}']`)) {
+            document.head.appendChild(link);
+        }
+    }
+    const jsList = ["js/datajson.js", "js/content.js", "js/script.js", "js/toolscript.js", "js/color.js", "js/listen.js", "js/Init.js"]
+    for (i of jsList) {
+        script = document.createElement('script')
+        console.log(baseUrl + i)
+        script.src = baseUrl + i
+        if (!document.querySelector(`body script[src='${baseUrl + i}']`)) {
+            document.body.appendChild(script);
+        }
+    }
+</script>
 
 </html>
