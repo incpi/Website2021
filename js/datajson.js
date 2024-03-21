@@ -1,3 +1,5 @@
+const baseUrl = window.location.hostname.match(/^\d/g) == null ? window.location.origin + window.location.pathname : "";
+
 project = [
     {
         "name": "Swift-Helper chrome-extension",
@@ -7,7 +9,7 @@ project = [
     {
         "name": "Trace Modifer CPI Helper Plugin",
         "content": "This is a small plugin for the CPI helper extension that allows you to precisely control the limit of floe to optimize your workflow. With this plugin, you can adjust the floe limit according to your needs and preferences, and see the impact on your performance and efficiency. This plugin is easy to activate and use, and compatible with the latest version of the CPI helper extension.",
-        "link": "https://incpi.github.io/cpihelper-plugin"
+        "link": baseUrl + "/cpihelper-plugin"
     },
     {
         "link": "https://github.com/dbeck121/CPI-Helper-Chrome-Extension",
@@ -25,7 +27,7 @@ project = [
         "content": "This tool allow to reduce to get selected node and exclude everything else"
     },
     {
-        "link": "/Veeva_adaptor",
+        "link": baseUrl + "/Veeva_adaptor",
         "name": "Custom Adaptor For SAP CPI",
         "content": "The Veeva Custom SAP CPI Adaptor enables faster and more reliable integration between Veeva CRM and SAP ERP, reducing the need for manual authentication and ensuring data accuracy and consistency across the systems.<br><br>The adaptor supports various business scenarios that are common in the life sciences industry, such as managing orders, inventory, pricing, billing, and customer master data. This helps to streamline the business processes and improve customer satisfaction and loyalty.<br><br>The adaptor leverages the SAP Cloud Platform Integration service, which is a cloud-based solution that offers high scalability, security, and performance. The adaptor also provides a user-friendly interface for configuring and monitoring the integration processes, allowing for easy troubleshooting and maintenance."
     }
