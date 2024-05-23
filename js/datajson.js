@@ -1,5 +1,10 @@
 const project = [
     {
+        "name":"Dark CPI Web Extension",
+         "content":"This open-source project provides a sleek, dark interface for your SAP Cloud Platform Integration (CPI) environment, enhancing visual comfort and overall user experience.",
+         "link":"https://incpi.github.io/Dark-CPI-Web-Extension"
+    },
+    {
         "name": "Swift-Helper chrome-extension",
         "content": "Swift Helper is a chrome extension that helps you write faster and better code in Swift. It provides features such as syntax highlighting, code completion, error checking, formatting, and refactoring. You can also access documentation, tutorials, and examples from within the extension. Swift Helper is compatible with most online code editors and IDEs, such as CodePen, Repl.it, and Xcode. Whether you are a beginner or an expert, Swift Helper can make your coding experience more productive and enjoyable.",
         "link": "https://incpi.github.io/Swift-Helper-browser-extension"
